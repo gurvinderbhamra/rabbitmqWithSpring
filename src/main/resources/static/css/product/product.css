@@ -1,0 +1,79 @@
+.products {
+    margin: 10px;
+    padding: 20px;
+    width: 50%;
+    text-align: center;
+    box-shadow: 1px 1px 10px grey;
+}
+
+.products > tbody > * {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.product-form {
+    margin: 10px;
+    padding: 10px;
+    flex: 1;
+    text-align: center;
+    box-shadow: 1px 1px 10px grey;
+}
+
+.input-label {
+    margin: 10px;
+    width: 50%;
+    text-align: center;
+}
+
+.input-field {
+    margin: 10px;
+    text-align: center;
+}
+
+.input-field > input {
+    padding: 5px !important;
+    border-radius: 5px;
+    border: 1px solid lightgrey;
+    transition: 0.4s;
+}
+
+.input-field > input:focus {
+    border: 1px solid deepskyblue;
+    box-shadow: 1px 1px 8px deepskyblue;
+    outline: none
+}
+
+.form-button {
+    flex: 1;
+    border: 1px solid deepskyblue;
+    transition: 0.2s;
+    padding: 7px;
+    font-weight: bold;
+    border-radius: 5px;
+    color: white;
+    background-color: deepskyblue;
+    margin: 15px;
+}
+
+.form-button:hover {
+    border: 1px solid deepskyblue;
+    color: deepskyblue;
+    background-color: white;
+}
+
+.send-message {
+    text-decoration: none;
+    background-color: deepskyblue;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid deepskyblue;
+    font-weight: bold;
+    font-size: 10px;
+    transition: 0.3s;
+    padding: 2px;
+}
+
+.send-message:hover {
+    color: deepskyblue;
+    background-color: white;
+}

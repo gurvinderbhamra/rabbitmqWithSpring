@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Products</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/product/product.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/application.css}"/>
+    <script th:src="@{/javascripts/product.js}"></script>
+</head>
+<body>
+<div>
+    <span th:if="${error != null}" th:text="${error}"></span>
+</div>
+<div class="container">
+    <table class="products">
+        <thead>
+        <tr>
+            <td>Product Id</td>
+            <td>Product Name</td>
+            <td>Product Price</td>
+            <td>Send Product</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="product : ${productsList}">
+            <td>
+                <span th:text="${product.id}"></span>
+            </td>
+            <td>
+                <span th:text="${product.name}"></span>
+            </td>
+            <td>
+                <span th:text="${product.price}"></span>
+            </td>
+            <td>
+                <a class="send-message" th:href="@{'/product/send/' + ${product.id}}">Send Message</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <div class="product-form" th:include="~{'fragments/product-form'}"></div>
+</div>
+</body>
+</html>

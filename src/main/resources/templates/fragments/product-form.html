@@ -1,0 +1,36 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+    Product create form
+    <hr/>
+    <form method="post" th:action="@{'/product/create'}" th:object="${product}" onsubmit="return validateForm()">
+        <div class="container">
+            <div class="input-label">
+                <label for="product-name">
+                    Product Name:
+                </label>
+            </div>
+            <div class="input-field">
+                <input type="text" th:field="*{name}" id="product-name" autocomplete="off"
+                       onkeyup="validateProductName()"/>
+                <div class="error" id="product-name-error"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="input-label">
+                <label for="product-price">
+                    Product Price:
+                </label>
+            </div>
+            <div class="input-field">
+                <input type="text" th:field="*{price}" id="product-price" autocomplete="off"
+                       onkeyup="validateProductPrice()"/>
+                <div class="error" id="product-price-error"></div>
+            </div>
+        </div>
+        <div class="container">
+            <input type="submit" value="Create" class="form-button ml-100"/>
+            <input type="reset" value="Reset" class="form-button mr-100"/>
+        </div>
+    </form>
+
+</html>
